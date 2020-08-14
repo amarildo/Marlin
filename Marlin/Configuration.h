@@ -73,13 +73,13 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(jagoosw, Ender-5)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Amarildo, Ender-5 SKR v1.4)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 
 //#define E3D // Enable this if you have an E3D all metal hotend
-#define E3D_Extreme // Enable this if you want to print at more than 285 degrees, this is strongly not reccomended by E3D but I neeeded it briefly. They say a little over isn't too risky but should not be done long term
-#define chamber // Enable this to if you have a chamber with the thermistor in the E1 thermistor connector, the heater in the other heater port (beside the bed heater) and the hotend heatsink fan which was prevuiysly in this hole in a different, always on, fan pin
+//#define E3D_Extreme // Enable this if you want to print at more than 285 degrees, this is strongly not reccomended by E3D but I neeeded it briefly. They say a little over isn't too risky but should not be done long term
+//#define chamber // Enable this to if you have a chamber with the thermistor in the E1 thermistor connector, the heater in the other heater port (beside the bed heater) and the hotend heatsink fan which was prevuiysly in this hole in a different, always on, fan pin
 #define TMC2209_Enabled // Enable if you have TMC2209 drivers
 #define SKR_14_Turbo // Enable if SKR 1.4 turbo
 
@@ -130,7 +130,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
@@ -145,7 +145,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Ender-5"
+#define CUSTOM_MACHINE_NAME "Ender 5"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -637,7 +637,7 @@
 
 #define THERMAL_PROTECTION_HOTENDS // Enable thermal protection for all extruders
 #define THERMAL_PROTECTION_BED     // Enable thermal protection for the heated bed
-#define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber
+//#define THERMAL_PROTECTION_CHAMBER // Enable thermal protection for the heated chamber
 
 //===========================================================================
 //============================= Mechanical Settings =========================
@@ -891,7 +891,7 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
 //#define USE_PROBE_FOR_Z_HOMING
@@ -1422,8 +1422,8 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-//#define MANUAL_X_HOME_POS 0
-//#define MANUAL_Y_HOME_POS 0
+#define MANUAL_X_HOME_POS 224
+#define MANUAL_Y_HOME_POS 221
 //#define MANUAL_Z_HOME_POS 0
 
 // Use "Z Safe Homing" to avoid homing with a Z probe outside the bed area.
@@ -1553,8 +1553,8 @@
 
 // Preheat Constants
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 200
-#define PREHEAT_1_TEMP_BED     50
+#define PREHEAT_1_TEMP_HOTEND 205
+#define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_FAN_SPEED   0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "PETG"
