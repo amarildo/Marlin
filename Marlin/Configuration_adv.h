@@ -640,7 +640,7 @@
 
 //#define HOMING_BACKOFF_POST_MM { 2, 2, 2 }  // (mm) Backoff from endstops after homing
 
-#define QUICK_HOME                          // If G28 contains XY do a diagonal move first
+// #define QUICK_HOME                          // If G28 contains XY do a diagonal move first
 //#define HOME_Y_BEFORE_X                     // If G28 contains XY home Y before X
 //#define CODEPENDENT_XY_HOMING               // If X/Y can't home without homing Y/X first
 
@@ -3383,7 +3383,7 @@
  * WiFi Support (Espressif ESP32 WiFi)
  */
 //#define WIFISUPPORT         // Marlin embedded WiFi managenent
-//#define ESP3D_WIFISUPPORT   // ESP3D Library WiFi management (https://github.com/luc-github/ESP3DLib)
+#define ESP3D_WIFISUPPORT   // ESP3D Library WiFi management (https://github.com/luc-github/ESP3DLib)
 
 #if EITHER(WIFISUPPORT, ESP3D_WIFISUPPORT)
   //#define WEBSUPPORT          // Start a webserver (which may include auto-discovery)
@@ -3399,6 +3399,9 @@
    *   #define WIFI_PWD  "WiFi Password"
    */
   //#include "Configuration_Secure.h" // External file with WiFi SSID / Password
+
+#define WIFI_SSID "WiFi SSID"
+#define WIFI_PWD "WiFi Password"
 #endif
 
 /**
@@ -3507,17 +3510,17 @@
   //#define SERVICE_INTERVAL_3    1 // print hours
 #endif
 
-// @section develop
+    // @section develop
 
-//
-// M100 Free Memory Watcher to debug memory usage
-//
-//#define M100_FREE_MEMORY_WATCHER
+    //
+    // M100 Free Memory Watcher to debug memory usage
+    //
+    //#define M100_FREE_MEMORY_WATCHER
 
-//
-// M43 - display pin status, toggle pins, watch pins, watch endstops & toggle LED, test servo probe
-//
-//#define PINS_DEBUGGING
+    //
+    // M43 - display pin status, toggle pins, watch pins, watch endstops & toggle LED, test servo probe
+    //
+    //#define PINS_DEBUGGING
 
-// Enable Marlin dev mode which adds some special commands
-//#define MARLIN_DEV_MODE
+    // Enable Marlin dev mode which adds some special commands
+    //#define MARLIN_DEV_MODE
