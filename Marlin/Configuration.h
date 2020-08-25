@@ -113,13 +113,13 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 3
+#define SERIAL_PORT -1
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 -1
+#define SERIAL_PORT_2 0
 
 /**
  * This setting determines the communication speed of the printer.
@@ -522,24 +522,27 @@
   //#define DEFAULT_Kp 21.73
   //#define DEFAULT_Ki 1.54
   //#define DEFAULT_Kd 76.55
-  #define DEFAULT_Kp 28.81
-  #define DEFAULT_Ki 2.25
-  #define DEFAULT_Kd 92.34
+  // #define DEFAULT_Kp 28.81
+  // #define DEFAULT_Ki 2.25
+  // #define DEFAULT_Kd 92.34
+#define DEFAULT_Kp 20.24
+#define DEFAULT_Ki 1.60
+#define DEFAULT_Kd 64.08
 
-  // Ultimaker
-  //#define DEFAULT_Kp 22.2
-  //#define DEFAULT_Ki 1.08
-  //#define DEFAULT_Kd 114
+// Ultimaker
+//#define DEFAULT_Kp 22.2
+//#define DEFAULT_Ki 1.08
+//#define DEFAULT_Kd 114
 
-  // MakerGear
-  //#define DEFAULT_Kp 7.0
-  //#define DEFAULT_Ki 0.1
-  //#define DEFAULT_Kd 12
+// MakerGear
+//#define DEFAULT_Kp 7.0
+//#define DEFAULT_Ki 0.1
+//#define DEFAULT_Kd 12
 
-  // Mendel Parts V9 on 12V
-  //#define DEFAULT_Kp 63.0
-  //#define DEFAULT_Ki 2.25
-  //#define DEFAULT_Kd 440
+// Mendel Parts V9 on 12V
+//#define DEFAULT_Kp 63.0
+//#define DEFAULT_Ki 2.25
+//#define DEFAULT_Kd 440
 
 #endif // PIDTEMP
 
@@ -560,7 +563,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -1423,7 +1426,7 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-#define MANUAL_X_HOME_POS 233
+#define MANUAL_X_HOME_POS 234
 #define MANUAL_Y_HOME_POS 223
 //#define MANUAL_Z_HOME_POS 0
 
@@ -2448,8 +2451,8 @@
 // If the servo can't reach the requested position, increase it.
 #define SERVO_DELAY { 300 }
 
-// Only power servos during movement, otherwise leave off to prevent jitter
-//#define DEACTIVATE_SERVOS_AFTER_MOVE
+                                      // Only power servos during movement, otherwise leave off to prevent jitter
+                                      //#define DEACTIVATE_SERVOS_AFTER_MOVE
 
-// Allow servo angle to be edited and saved to EEPROM
-//#define EDITABLE_SERVO_ANGLES
+                                      // Allow servo angle to be edited and saved to EEPROM
+                                      //#define EDITABLE_SERVO_ANGLES
